@@ -1,5 +1,13 @@
 body {
-  background-image: linear-gradient(#cce6ff,#0066cc);
+  background-color: grey;
 }
-a {
-  color: #ffffff
+    h1 {text-align: center; text-shadow: 3px 2px red; font-family: Helvetica}
+h1 {color: 	#FFD700}
+td {width: 2px; height: 0.3vh; text-align: center; font-size: 6px; font-weight: bold; border: 1px solid white}
+td:hover {background-color: #FFFD70}
+html, body {
+    width: 100%;
+}
+table {
+    margin: 0 auto;
+}
