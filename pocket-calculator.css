@@ -1,5 +1,7 @@
 body {
-  background-color: grey;
+  background-image: linear-gradient(#6B91B8,#611192);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
     h1 {text-align: center; text-shadow: 3px 2px red; font-family: Helvetica}
 h1 {color: 	#FFD700}
@@ -10,4 +12,9 @@ html, body {
 }
 table {
     margin: 0 auto;
+}
+button {
+  font-size: 35px;
+  width: 100%;
+  color: red;
 }
