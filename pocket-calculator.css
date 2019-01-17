@@ -19,3 +19,6 @@ button {
   color: hotpink;
   background-position: center;
 }
+calculator-keys {
+  width: 45px
+}
