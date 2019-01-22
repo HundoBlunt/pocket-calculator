@@ -2,7 +2,7 @@ var evalArr = ['','','']; var lastNum = true; var lastSym = false; var lastEql =
 function insertNum(num){
   if (numNums < 9){
     if (lastEql){
-      clearOut(); lastEql = false; currNum = 0; evalArr = ['','','']; lastNum = true; lastSym = false; currNum = 0; nonLoc = []; numNums = 0; decimalExt = false; afterDecArr = [];
+      cleared(); lastEql = false; currNum = 0; evalArr = ['','','']; lastNum = true; lastSym = false; currNum = 0; nonLoc = []; numNums = 0; decimalExt = false; afterDecArr = [];
 
     }
     if (lastNum){
@@ -24,7 +24,19 @@ function insertNum(num){
   evalArr[currNum] = evalArr[currNum] + num;
   }
 }
-function parseDec(){
+function inserts(sym){
+  if (lastSym){
+    if (firstSym){
+      document.getElementById('output').value = (sym); nonLoc = []; numNums = 0;
+      lastNum = false; lastEql = false; evalArr[1] = sym; currNum++;
+    } else if(firstSym === false){
+      equals();
+      document.getElementById('output').value = (sym); nonLoc = []; numNums = 0;
+      lastNum = false; lastEql = false; evalArr[1] = sym; currNum++;
+    }
+  }
+}
+function insertDec(){
   if (numNums < 9){
     if (decimalExt == false){
       if (lastSym){
@@ -38,18 +50,6 @@ function parseDec(){
           evalArr[currNum] = evalArr[currNum] + '.'; lastSym = false; lastNum = true; numNums++;
         }
       }
-    }
-  }
-}
-function inserts(sym){
-  if (lastSym){
-    if (firstSym){
-      document.getElementById('output').value = (sym); nonLoc = []; numNums = 0;
-      lastNum = false; lastEql = false; evalArr[1] = sym; currNum++;
-    } else if(firstSym === false){
-      equals();
-      document.getElementById('output').value = (sym); nonLoc = []; numNums = 0;
-      lastNum = false; lastEql = false; evalArr[1] = sym; currNum++;
     }
   }
 }
